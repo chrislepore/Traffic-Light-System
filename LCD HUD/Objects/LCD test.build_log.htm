@@ -1,0 +1,104 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: christopher lepore, suny new paltz, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.15
+Assembler:       Armasm.exe V6.15
+Linker/Locator:  ArmLink.exe V6.15
+Library Manager: ArmAr.exe V6.15
+Hex Converter:   FromElf.exe V6.15
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+D:\Chris\Documents\Work\Engineering stuff\microcontrollers\traffic light system\LCD HUD\LCD test.uvprojx
+Project File Date:  04/09/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.15', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+LCD test.c(122): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                case 2: LCD_print(td); LCD_print(gy[0]); LCD_data(G|0x30); LCD_data(','); LCD_print(gy[1]); LCD_data(Y|0x30);           //time delay change
+                                                         ~~~~~~~~ ~^~~~~
+LCD test.c(122): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                case 2: LCD_print(td); LCD_print(gy[0]); LCD_data(G|0x30); LCD_data(','); LCD_print(gy[1]); LCD_data(Y|0x30);           //time delay change
+                                                                                                            ~~~~~~~~ ~^~~~~
+LCD test.c(128): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                                                LCD_data(cursor + 0x30); LCD_data(' '); LCD_data('S');
+                                                ~~~~~~~~ ~~~~~~~^~~~~~
+LCD test.c(161): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+                                                else if(step == 3 && (~(GPIOC -> IDR >> 8)      & 0x1)) {TIM2->ARR = (((5*cursor)+5)*1000)-1; cursor = 0; step = 0; stage = 0; delayMs(1000);}
+                                                                                                                   ~ ~~~~~~~~~~~~~~~~~~~~~^~
+LCD test.c(296): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOC->PUPDR &= ~0x00FF00FF; /* clear pin mode */
+                             ~~ ^~~~~~~~~~~
+LCD test.c(297): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOC->MODER &= ~0x0000FF00; /* clear pin mode */
+                             ~~ ^~~~~~~~~~~
+LCD test.c(298): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOA->MODER &= ~0x000FFF0F; /* clear pin mode */
+                             ~~ ^~~~~~~~~~~
+LCD test.c(299): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOB->MODER &= ~0x0000FFFF; /* clear pin mode */
+                             ~~ ^~~~~~~~~~~
+LCD test.c(307): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                SYSCFG->EXTICR[0] &= ~0xFF00; // clear ports
+                                  ~~ ^~~~~~~
+LCD test.c(375): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+    LCD_nibble_write(command << 4, 0);      /* then lower nibble */
+    ~~~~~~~~~~~~~~~~ ~~~~~~~~^~~~
+LCD test.c(386): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+    LCD_nibble_write(data << 4, RS);        /* then lower nibble */
+    ~~~~~~~~~~~~~~~~ ~~~~~^~~~
+LCD test.c(422): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+12 warnings generated.
+compiling LCD test.c...
+linking...
+Program Size: Code=3496 RO-data=484 RW-data=224 ZI-data=1672  
+".\Objects\LCD test.axf" - 0 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Chris\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Chris\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F446xx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f446xx.s
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
