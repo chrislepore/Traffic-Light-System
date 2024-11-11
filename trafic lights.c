@@ -71,7 +71,7 @@ int main(void) {
 										redRed();
 										break;
 						default: urbanTraffic();
-										break;
+										 break;
 					}
 				}
 				else {LCD_HUD(); GPIOA->ODR = 0x00000240; TIM2->CNT = 0;} //sets interupt counter to 0 and LEDs to solid red
