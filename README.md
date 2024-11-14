@@ -38,7 +38,7 @@ The hardware configuration uses the following components:
 Below are block diagrams illustrating the setup of the traffic light controller circuit:
 
 
-![hardware block diagram]()
+![hardware block diagram](https://raw.githubusercontent.com/chrislepore/Traffic-Light-System/refs/heads/main/Images/Hardware%20Diagram.PNG)
 
 ## Software and Flowcharts
 
@@ -103,7 +103,7 @@ The rural mode incorporates car sensors, keeping the green light active until no
 
 ### Flowcharts
 
-![Traffic Light Control]()
+![Traffic Light Control](https://raw.githubusercontent.com/chrislepore/Traffic-Light-System/refs/heads/main/Images/TrafficLight%20Control%20Flowchart.PNG)
 
 ## Mode Switching
 
@@ -113,9 +113,9 @@ The system can switch modes based on a real-time schedule. A SysTick interrupt h
 
 The system was tested on a breadboard circuit and successfully validated for all modes. Below is an image of the complete circuit setup:
 
-![breadboard circuit image]()
+![breadboard circuit image](https://raw.githubusercontent.com/chrislepore/Traffic-Light-System/refs/heads/main/Images/Breadboard.jpg)
 
-![Nucleo-64 board]()
+![Nucleo-64 board](https://raw.githubusercontent.com/chrislepore/Traffic-Light-System/refs/heads/main/Images/stm32%20DevBoard.jpg)
 
 ## Conclusion
 
